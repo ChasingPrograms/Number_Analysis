@@ -20,7 +20,11 @@ Requirements:
         Scanner scan = new Scanner(System.in);
         System.out.println("Welcome, How many numbers would you like to analyse? (In Integers):");
         int n = scan.nextInt();
-        
+        while(n < 1){
+            System.out.println("> INVALID NUMBER DETECTED <");
+            System.out.println("How many numbers would you like to analyse? (In Integers):");
+            n = scan.nextInt();
+        }
 
         System.out.println("Creating " + n + " slots");
 
